@@ -1,3 +1,5 @@
 # DAX
 
-This repository contains a collection of DAX code snippets and user-defined functions that I created for my work or for some personal projects. All examples have been generalized and anonymized, and each entry includes a short description of its use case.
+This repository contains a collection of DAX code snippets and DAX user-defined functions that I created for my work or for some personal projects, and that I find quite interesting for their complexity or for their use case, to make them worthy to be shared. 
+
+All examples have been generalized, and each entry includes a short description of its use case.
