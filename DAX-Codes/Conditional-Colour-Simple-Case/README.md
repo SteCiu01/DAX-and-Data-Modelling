@@ -1,6 +1,6 @@
-# Conditional Colour based on slicer selection
+# Conditional Colour Based on Slicer Selection
 
-## Simple Scenarios
+### Simple Scenarios
 
 ### Hide/unhide a button or an object
 
