@@ -1,0 +1,30 @@
+Net Old Position (Correct) = 
+
+VAR VirtTable =
+SUMMARIZE(
+    MyCompanyPositions,
+    MyCompanyPositions[Parent_ID],
+    MyCompanyPositions[Child_ID],
+    MyCompanyPositions[Customer_Name],
+    MyCompanyPositions[Currency],
+    "Logic",
+    IF(
+        [Total Position] < 0, BLANK(),
+        IF(
+            [Total Position Old] < 0, BLANK(),
+            IF(
+                [Total Position Old] > [Total Position], [Total Position],
+                [Total Position Old]
+            )
+        )
+    )
+)
+
+VAR NetOldVeryOld =
+SUMX(
+    VirtTable,
+    [Logic]
+)
+        
+RETURN
+NetOldVeryOld
