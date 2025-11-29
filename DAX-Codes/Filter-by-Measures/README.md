@@ -13,7 +13,7 @@ This is possible using the Power BI default filter pane; however, it is not so i
 <img width="50%"  alt="image" src="https://github.com/user-attachments/assets/ad264200-3bc1-47d5-9009-d0abd652fd06" />
 <br><br>
 
-In the image above, there is our visual, and we want to set up a slicer that will let users decide which customers (at parent level) they wil keep in the visual based on a range of the Customer Total Position of their choice. 
+In the image above, there is our visual, and we want to set up a slicer that will let users decide which customers (at parent level) they will keep in the visual based on a range of the Customer Total Position of their choice. 
 
 For example, if a user decides to keep only customers with a positive position at parent level we would want to display in the visual only customers with Parent_IDs P4 and P1.
 
@@ -52,10 +52,10 @@ CALCULATETABLE(
             MyCompanyPositions,
             MyCompanyPositions[Parent_ID],
             "PARENT_TO_USE", SELECTEDVALUE(MyCompanyPositions[Parent_ID]),
-            "TotalPositionCID", SUM(MyCompanyPositions[Position_USD])
+            "TotalPosition", SUM(MyCompanyPositions[Position_USD])
         ),
 
-        [TotalPositionCID] >= MinInput && [TotalPositionCID] <= MaxInput
+        [TotalPosition] >= MinInput && [TotalPosition] <= MaxInput
         ),
 
     // we need to remove CHILD_ID from being filtered in the visual to properly roll-up to parent level (as this is the lower level of hierarchy in the matrix)
@@ -86,13 +86,13 @@ PARENT_Filtering
 
 ## 4 - Use the columns “From” and “To” from the MinAmount and MaxAmount tables in 2 slicers  
 
-<img width="30%" alt="image" src="https://github.com/user-attachments/assets/314654c4-ecc7-44f3-adae-7c8c366994f7" />
+<img width="40%" alt="image" src="https://github.com/user-attachments/assets/314654c4-ecc7-44f3-adae-7c8c366994f7" />
 
 Here, I would advise setting up the slicer so that it looks like one filter only, where the users can seamlessly select their range. 
 
 Also, sort the columns in the slicers in “Ascending” order – this is why we made those operations with the ranking columns earlier.
 
-<img width="30%" alt="image" src="https://github.com/user-attachments/assets/34ed40d5-36ed-4c36-9cb3-8d7e3d71b1d0" />
+<img width="40%" alt="image" src="https://github.com/user-attachments/assets/34ed40d5-36ed-4c36-9cb3-8d7e3d71b1d0" />
 
 At this point, the whole filter by measure technique is done. We can now test it and see if it works.
 
@@ -100,7 +100,85 @@ At this point, the whole filter by measure technique is done. We can now test it
 
 Selecting the range, only the P4 and P1 customers are visible in the visual (it worked!). Note: this approach, with the control measure above, works well regardless of other slicers that are applied. In the image below, it is possible to see how the range is selected only for the positions in GBP.
 
-<img width="50%" alt="image" src="https://github.com/user-attachments/assets/bbb5aea9-d188-401b-97b2-dfd5e5dd4374" />
+<img width="60%" alt="image" src="https://github.com/user-attachments/assets/bbb5aea9-d188-401b-97b2-dfd5e5dd4374" />
 
+## Possible Enhancement
 
+An enhancement that is possible to implement would be to let the user the possibility to decide which level of hierarchy to use for filtering the amount range. 
+
+In our example, the range filter is applied only at the Parent_ID level. However, by adding a simple disconnected table (table below), we could create a button slicer next to the range filter that allows switching between hierarchy levels and applying the amount range filter accordingly.
+
+| Hierarchical_Level | ID |
+|---------|-------------|
+| Parent_ID | 1 |
+| Child_ID | 2 |
+
+Of course the control measure would need to  be amended as follows, considering the new disconnected table:
+
+```
+FilterByAmount = 
+
+VAR Maxinput = SELECTEDVALUE('MaxAmount'[MaxAmount])
+VAR MinInput = SELECTEDVALUE(MinAmount[MinAmount])
+
+VAR PARENT_TotalPosition =  // roll-up to parent level to identify parent's IDs to be included
+CALCULATETABLE(
+    FILTER(
+        SUMMARIZE(
+            MyCompanyPositions,
+            MyCompanyPositions[Parent_ID],
+            "PARENT_TO_USE", SELECTEDVALUE(MyCompanyPositions[Parent_ID]),
+            "TotalPositionCID", SUM(MyCompanyPositions[Position_USD])
+        ),
+
+        [TotalPosition] >= MinInput && [TotalPosition] <= MaxInput
+        ),
+
+    // we need to remove CHILD_ID from being filtered in the visual to properly roll-up to parent level (as this is the lower level of hierarchy in the matrix)
+    // if we want to be able to choose the range for the child level we need to remove this ALLSELECTED
+    ALLSELECTED(MyCompanyPositions[Child_ID]) 
+)
+
+VAR PARENT_List = // create the list with selectcolumns function
+    SELECTCOLUMNS(
+        PARENT_TotalPosition,
+        "PARENT", [PARENT_TO_USE]
+    )
+
+VAR PARENT_Filtering = // give to the IDs in the list value of 1 (later in the matrix filters, we keep only what is 1)
+    IF(
+        SELECTEDVALUE(MyCompanyPositions[Parent_ID]) IN PARENT_List,
+        1,
+        0
+    )
+
+VAR CHILD_TotalPosition =
+FILTER(
+        SUMMARIZE(
+            MyCompanyPositions,
+            MyCompanyPositions[Parent_ID],
+             MyCompanyPositions[Child_ID],
+            "PARENT_TO_USE", SELECTEDVALUE(MyCompanyPositions[Child_ID]),
+            "TotalPosition", SUM(MyCompanyPositions[Position_USD])
+        ),
+
+        [TotalPosition] >= MinInput && [TotalPositionCID] <= MaxInput
+)
+
+VAR PARENT_List = // create the list with selectcolumns function
+    SELECTCOLUMNS(
+        PARENT_TotalPosition,
+        "PARENT", [PARENT_TO_USE]
+    )
+
+VAR PARENT_Filtering = // give to the IDs in the list value of 1 (later in the matrix filters, we keep only what is 1)
+    IF(
+        SELECTEDVALUE(MyCompanyPositions[Parent_ID]) IN PARENT_List,
+        1,
+        0
+    )
+
+RETURN
+PARENT_Filtering
+```
 
