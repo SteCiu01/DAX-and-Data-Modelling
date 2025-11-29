@@ -54,8 +54,8 @@ CALCULATETABLE(
         [TotalPositionCID] >= MinInput && [TotalPositionCID] <= MaxInput
         ),
 
-    // we need to remove CHILD_ID to properly roll-up to parent level (as this is the lower level of hierarchy in the matrix)
-    REMOVEFILTERS(MyCompanyPositions[Child_ID]) 
+    // we need to remove CHILD_ID from being filtered in the visual to properly roll-up to parent level (as this is the lower level of hierarchy in the matrix)
+    ALLSELECTED(MyCompanyPositions[Child_ID]) 
 )
 
 VAR PARENT_List = // create the list with selectcolumns function
