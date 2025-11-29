@@ -5,7 +5,13 @@ It is designed as a reference library for building semantic models, to avoid goi
 
 Each code/use case is documented and organized by macro categories that I defined based on the code's nature and usage.
 
-#### Control Measures: measures to use within the visual filters
+#### Formatting Measures: measures to use when creating custom formatting logics
+
+| Topic | Description | Link |
+|---------|-------------|------|
+| Colour Measures |  Easy access to colours when building custom formatting logics | [Link](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/Colour-Measures/README.md) |
+
+#### Control Measures: measures to use within the visuals' filters
 
 | Topic | Description | Link |
 |---------|-------------|------|
