@@ -26,7 +26,7 @@ Measures to use within the visuals' filters. They let developers control what is
 
 #### Virtual Table Measures
 
-These are calculations that rely on in-code virtual tables, and that are used for complex/custom use cases, that would not be possible to successfully handle with simple measures.
+These are calculations that rely on in-code virtual tables, and that are used for complex/custom use cases, that would not be possible to successfully achieve with simple measures.
 
 | Topic | Description | Link |
 |---------|-------------|------|
