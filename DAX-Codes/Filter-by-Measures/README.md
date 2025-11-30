@@ -45,7 +45,7 @@ FilterByAmount =
 VAR Maxinput = SELECTEDVALUE('MaxAmount'[MaxAmount])
 VAR MinInput = SELECTEDVALUE(MinAmount[MinAmount])
 
-VAR PARENT_TotalPosition =  // roll-up to parent level to identify parent's IDs to be included
+VAR PARENT_TotalPosition = 
 CALCULATETABLE(
     FILTER(
         SUMMARIZE(
@@ -58,8 +58,8 @@ CALCULATETABLE(
         [TotalPosition] >= MinInput && [TotalPosition] <= MaxInput
         ),
 
-    // we need to remove CHILD_ID from being filtered in the visual to properly roll-up to parent level (as this is the lower level of hierarchy in the matrix)
-    // if we want to be able to choose the range for the child level we need to remove this ALLSELECTED
+    // we need to remove CHILD_ID from being filtered in the visual to properly filter based on parent level (as this is the lower level of hierarchy in the matrix)
+    // in case we want to be able to choose the range for the child level we need to remove this ALLSELECTED. In this case the filter range will apply to the child_id
     ALLSELECTED(MyCompanyPositions[Child_ID]) 
 )
 
@@ -108,6 +108,8 @@ An enhancement that is possible to implement would be to let the user the possib
 
 In our example, the range filter is applied only at the Parent_ID level. However, by adding a simple disconnected table (table below), we could create a button slicer next to the range filter that allows switching between hierarchy levels and applying the amount range filter accordingly.
 
+Table name: hierarchy_control
+
 | Hierarchical_Level | ID |
 |---------|-------------|
 | Parent_ID | 1 |
@@ -121,31 +123,28 @@ FilterByAmount =
 VAR Maxinput = SELECTEDVALUE('MaxAmount'[MaxAmount])
 VAR MinInput = SELECTEDVALUE(MinAmount[MinAmount])
 
-VAR PARENT_TotalPosition =  // roll-up to parent level to identify parent's IDs to be included
+VAR PARENT_TotalPosition =  
 CALCULATETABLE(
     FILTER(
         SUMMARIZE(
             MyCompanyPositions,
             MyCompanyPositions[Parent_ID],
             "PARENT_TO_USE", SELECTEDVALUE(MyCompanyPositions[Parent_ID]),
-            "TotalPositionCID", SUM(MyCompanyPositions[Position_USD])
+            "TotalPosition", SUM(MyCompanyPositions[Position_USD])
         ),
 
         [TotalPosition] >= MinInput && [TotalPosition] <= MaxInput
         ),
-
-    // we need to remove CHILD_ID from being filtered in the visual to properly roll-up to parent level (as this is the lower level of hierarchy in the matrix)
-    // if we want to be able to choose the range for the child level we need to remove this ALLSELECTED
     ALLSELECTED(MyCompanyPositions[Child_ID]) 
 )
 
-VAR PARENT_List = // create the list with selectcolumns function
+VAR PARENT_List =
     SELECTCOLUMNS(
         PARENT_TotalPosition,
         "PARENT", [PARENT_TO_USE]
     )
 
-VAR PARENT_Filtering = // give to the IDs in the list value of 1 (later in the matrix filters, we keep only what is 1)
+VAR PARENT_Filtering = 
     IF(
         SELECTEDVALUE(MyCompanyPositions[Parent_ID]) IN PARENT_List,
         1,
@@ -157,28 +156,32 @@ FILTER(
         SUMMARIZE(
             MyCompanyPositions,
             MyCompanyPositions[Parent_ID],
-             MyCompanyPositions[Child_ID],
-            "PARENT_TO_USE", SELECTEDVALUE(MyCompanyPositions[Child_ID]),
+             MyCompanyPositions[Child_ID], -- added child id here
+            "CHILD_TO_USE", SELECTEDVALUE(MyCompanyPositions[Child_ID]),
             "TotalPosition", SUM(MyCompanyPositions[Position_USD])
         ),
 
         [TotalPosition] >= MinInput && [TotalPositionCID] <= MaxInput
 )
 
-VAR PARENT_List = // create the list with selectcolumns function
+VAR CHILD_List = // create the list with selectcolumns function
     SELECTCOLUMNS(
-        PARENT_TotalPosition,
-        "PARENT", [PARENT_TO_USE]
+        CHILD_TotalPosition,
+        "CHILD", [CHILD_TO_USE]
     )
 
-VAR PARENT_Filtering = // give to the IDs in the list value of 1 (later in the matrix filters, we keep only what is 1)
+VAR CHILD_Filtering = // give to the IDs in the list value of 1 (later in the matrix filters, we keep only what is 1)
     IF(
-        SELECTEDVALUE(MyCompanyPositions[Parent_ID]) IN PARENT_List,
+        SELECTEDVALUE(MyCompanyPositions[CHILD_ID]) IN CHILD_List,
         1,
         0
     )
 
 RETURN
-PARENT_Filtering
+IF(
+    SELECTEDVALUE(hierarchy_control[ID]) = 1,
+    PARENT_Filtering,
+    CHILD_Filtering
+)
 ```
 
