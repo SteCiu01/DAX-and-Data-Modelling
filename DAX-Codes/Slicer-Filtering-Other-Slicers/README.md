@@ -33,7 +33,7 @@ dim_products_details (1) ---> (*) fact_retuns
 Now, if you select customer A, you want to see in the other slicer the products that have either sales or returns only for that customer, thus the measure needs to be expanded as follows:
 
 ```
-Filter Other Slicer = COUNTROWS(RELATEDTABLE(fact_sales)) + COUNTROWS(RELATEDTABLE(fact_sales))
+Filter Other Slicer = COUNTROWS(RELATEDTABLE(fact_sales)) + COUNTROWS(RELATEDTABLE(fact_returns))
 ```
 
 This way the measure is expandable for as many fact tables as you have.
