@@ -21,8 +21,8 @@ Measures to use within the visuals' filters. They let developers control what is
 
 | Topic | Description | Link |
 |---------|-------------|------|
-| Filter by Measures | Control measure that allows users to filter visuals by quantitative measures (e.g., Total Amount) | [Link](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/Filter-by-Measures/README.md) |
 | Slicers Filtering Other Slicers | Control measure that removes “dead” slicer values and avoids confusing blank visuals | [Link](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/Slicer-Filtering-Other-Slicers/README.md) |
+| Filter by Measures | Control measure that allows users to filter visuals by quantitative measures (e.g., Total Amount) | [Link](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/Filter-by-Measures/README.md) |
 
 #### Virtual Table Measures
 
