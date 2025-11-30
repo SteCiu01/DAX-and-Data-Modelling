@@ -20,7 +20,7 @@ IF(
 Transparent_or_Blue =
 IF(
   SELECTEDVALUE(Dim_Table[ColumnName]) = "Category_A",
-            [ColorGrey],
-            [ColorTransparent]
+            [ColorBlue],
+            [ColorGrey]
   )
 ```
