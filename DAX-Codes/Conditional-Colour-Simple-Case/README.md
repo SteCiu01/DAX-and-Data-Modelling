@@ -1,8 +1,8 @@
 # Conditional Colour Based on Slicer Selection
 
-### Simple Scenarios
+### Simple Scenarios Templates
 
-### Hide/unhide a button or an object
+#### Hide/unhide a button or an object
 
 ```
 Transparent_or_Blue =
@@ -14,7 +14,7 @@ IF(
             [ColorTransparent]
   )
 ```
-### Color based on a category selection
+#### Color based on a category selection
 
 ```
 Transparent_or_Blue =
