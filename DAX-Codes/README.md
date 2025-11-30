@@ -15,7 +15,7 @@ Measures to use when creating custom formatting logics
 
 #### Control
 
-Measures to use within the visuals' filters. They let developers control what is displayed in visuals
+Measures to use within the visuals' filters. They let developers control what is displayed in the visuals
 
 | Topic | Description | Link |
 |---------|-------------|------|
