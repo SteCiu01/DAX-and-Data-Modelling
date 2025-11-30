@@ -14,6 +14,7 @@ Measures to use when creating custom formatting logics
 | Colour Measures |  Easy access to colours when building custom formatting logics | [Link](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/Colour-Measures/README.md) |
 | Conditional Colour Based on Slicer Selection | Simple conditional colour logics | [Link](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/Conditional-Colour-Simple-Case/README.md) |
 | Conditional TopN Colour Rank |  Use RANKX for highlighting TOP-N or BOTTOM-N categories | [Link](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/Conditional-TOPN-Colour-RANKX/README.md) |
+|Dynamic Visuals Headers |  Visual header that change based on slicers selection | [Link](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/Dynamic-Visuals-Headers/README.md) |
 
 #### Control
 
