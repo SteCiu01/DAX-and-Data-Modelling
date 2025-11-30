@@ -97,5 +97,7 @@ Image 2: currency level not shown, matrix rolled up at child id level
 
 <img width="55%" alt="image" src="https://github.com/user-attachments/assets/919c3eeb-b159-41c7-ac2f-776535ec0cae" />
 
-If until the currency level is there, the measure Logic works as intended (although no totals are displayed) but when we roll up at child id level it does not return the intended number, while the Old Position (Correct) does. This because the latter still calculates the net position at currency level and then sums up  these positions for each level of the hierarchy. 
+If until the currency level is there the measure Logic works as intended (although no totals are displayed), when we roll up at child id level it does not return the intended number, while the Old Position (Correct) does. 
+
+This because the latter still calculates the net position at currency level and then sums up these positions for each level of the hierarchy. 
 
