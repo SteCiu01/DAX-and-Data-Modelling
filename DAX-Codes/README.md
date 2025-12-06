@@ -32,4 +32,4 @@ These are calculations that rely on in-code virtual tables, and that are used fo
 | Topic | Description | Link |
 |---------|-------------|------|
 | Row Level Conditional Logic with Virtual Tables | Perform a logical calculation at a defined level of hierarchical granularity | [Link](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/Row-Level-Conditional-Logic-in-Virtual-Tables/README.md) |
-| Virtual Tables for Distinct Combinations Count | Coming Soon | - |
+| Virtual Tables for Counting Distinct Combinations of Items | When you have a too granular table to count items, use virtual tables to generate you desired granularity | [Link](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/Distinct-Combinations-Count-with-Virtual-Tables/README.md) |
