@@ -1,4 +1,4 @@
-# Virtual Tables for counting distinnct combinations of items
+# Virtual Tables for Counting Distinct Combinations of Items
 
 Let'simagine we have the facts_sales_table as below:
 
