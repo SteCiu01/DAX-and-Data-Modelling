@@ -7,7 +7,7 @@ Each code/use case is documented and organized by macro categories that I define
 
 #### Formatting Measures
 
-Measures to use when creating custom formatting logics
+Measures to use when creating custom formatting logics.
 
 | Topic | Description | Link |
 |---------|-------------|------|
@@ -42,7 +42,7 @@ Measures to use within the visuals or in the control buttons. They let developer
 
 #### Virtual Tables Measures
 
-These are calculations that rely on in-code virtual tables, and that are used for complex/custom use cases, that would not be possible to successfully achieve with simple measures.
+These are examples of calculations that rely on in-code virtual tables, and that are used for complex/custom use cases, that would not be possible to successfully achieve with simple measures.
 
 | Topic | Description | Link |
 |---------|-------------|------|
