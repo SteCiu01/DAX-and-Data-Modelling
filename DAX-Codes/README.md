@@ -26,6 +26,7 @@ In fact, a pre-requisite for time intelligence functions to work is to have a ca
 | Topic | Description | Link |
 |---------|-------------|------|
 | Create the Calendar Table | M-Code for creating a complete calendar table for the semantic model. Includes a future day for proper SPLY functions | [Link](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/Create-Calendar-Table/README.md) |
+| Handy Time Intelligence Functions | Some time intelligence functions, ready to be imported through DAX Query View | [Link](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/Handy-Time-Intelligence-Functions/README.md) |
 
 #### Control
 
