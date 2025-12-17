@@ -5,7 +5,7 @@ It is designed as a reference library for building semantic models, to avoid goi
 
 Each code/use case is documented and organized by macro categories that I defined based on the code's nature and usage.
 
-#### Formatting
+#### Formatting Measures
 
 Measures to use when creating custom formatting logics
 
@@ -18,7 +18,7 @@ Measures to use when creating custom formatting logics
 | Dynamic Visuals Headers |  Visual header that change based on slicers selection | [Link](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/Dynamic-Visuals-Headers/README.md) |
 | In-Measure SVGs | Use SVG images within measures to enhance your visualisations | [Link](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/In-Measure-SVGs/README.md) |
 
-#### Time Intelligence
+#### Time Intelligence Measures
 
 Collection of few important time intelligence measures together with and optimised simple calendar table that guarantees them to work properly.
 
@@ -29,16 +29,18 @@ In fact, a pre-requisite for time intelligence functions to work is to have a ca
 | Create the Calendar Table | M-Code for creating a complete calendar table for the semantic model. Includes a future day for proper SPLY functions | [Link](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/Create-Calendar-Table/README.md) |
 | Handy Time Intelligence Functions | Some time intelligence functions, ready to be imported through DAX Query View | [Link](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/Handy-Time-Intelligence-Functions/README.md) |
 
-#### Control
+#### Control Measures
 
-Measures to use within the visuals' filters. They let developers control what is displayed in the visuals
+Measures to use within the visuals or in the control buttons. They let developers control what is displayed in the visuals or what users will be clicking based on some criteria (e.g., username).
 
 | Topic | Description | Link |
 |---------|-------------|------|
 | Slicers Filtering Other Slicers | Control measure that removes “dead” slicer values and avoids confusing blank visuals | [Link](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/Slicer-Filtering-Other-Slicers/README.md) |
 | Filter by Measures | Control measure that allows users to filter visuals by quantitative measures (e.g., Total Amount) | [Link](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/Filter-by-Measures/README.md) |
 | Top-N Selection| Coming Soon | - |
-#### Virtual Table Measures
+| Page Level Security | Coming Soon | - |
+
+#### Virtual Tables Measures
 
 These are calculations that rely on in-code virtual tables, and that are used for complex/custom use cases, that would not be possible to successfully achieve with simple measures.
 
