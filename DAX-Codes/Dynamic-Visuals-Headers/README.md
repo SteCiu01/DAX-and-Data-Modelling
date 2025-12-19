@@ -13,7 +13,7 @@ IF(
     "World-Wide Country Indexes"
 )
 ```
-If all or everything is selected (image below)
+If all or nothing is selected (image below)
 
 <img width="60%" alt="image" src="https://github.com/user-attachments/assets/60e4323d-9a3a-4b5b-9090-0230b10af396" />
 
