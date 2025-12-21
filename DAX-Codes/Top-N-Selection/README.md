@@ -9,7 +9,7 @@
 
 **Step 1: create a numeric parameter**
 
-For example you can create a parameter that lets users to input from 1 to 50
+For example you can create a parameter that lets users input from 1 to 50
 
 ```
 Parameter Top-N = GENERATESERIES(1, 50, 1)
