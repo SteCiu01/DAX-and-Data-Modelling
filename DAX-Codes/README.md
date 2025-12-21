@@ -21,7 +21,7 @@ DAX techiques to use when creating custom formatting logics.
 
 #### Filter Context
 
-Guidelines on how to handlecomplex filtering with DAX
+Guidelines on how to handlecomplex filtering with DAX.
 
 | Topic | Description | Link |
 |---------|-------------|------|
@@ -40,7 +40,7 @@ In fact, a pre-requisite for time intelligence functions to work is to have a ca
 
 #### Control
 
-Measures to use within the visuals or in the control buttons. They let developers control what is displayed in the visuals or what users will be clicking based on some criteria (e.g., username).
+Measures to use within the visuals or in control/navigation buttons. They let developers control what is displayed in the visuals or what users will be clicking based on some criteria.
 
 | Topic | Description | Link |
 |---------|-------------|------|
