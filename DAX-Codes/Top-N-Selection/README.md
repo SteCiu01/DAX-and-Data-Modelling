@@ -19,7 +19,7 @@ Then you can set up the default value in the parameter as follow:
 
 ```
 Parameter Top-N Value = 
-SELECTEDVALUE('Parameter Top-N'[3.0 - Parameter Top-N], 10)
+SELECTEDVALUE('Parameter Top-N'[Parameter Top-N], 10)
 ```
 
 **Step 2: create the control measure to use as filter on the bar chart visual**
@@ -66,7 +66,7 @@ RETURN
 **Step 3: finalisation**
 
 1. Use the control measure in the bar chart visual filters and set it as **"IS 1"**
-2. In a slicer use the ```Parameter Top-N'[3.0 - Parameter Top-N]``` from the parameter.
+2. In a slicer use the ```Parameter Top-N'[Parameter Top-N]``` from the parameter.
 3. In slicer format > slicer settings > options-style set "Single Vlaue"
 
 Now you can input in the slicer a Top N number, from 1 to 50 and see in the bar chart the top N customers with their amount of Total Sales.
