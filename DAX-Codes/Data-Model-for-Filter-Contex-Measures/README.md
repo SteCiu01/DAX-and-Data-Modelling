@@ -4,7 +4,7 @@ Using slicers based on some columns of a fact table can be generally acceptable 
 
 Let's make an example to see the issue and the solution.
 
-We have a Purchase Orders fact table:
+We have a Purchase Orders fact table (facts_po_data):
 
 | customer_id |  PO_nr   | days_old |
 |------------|---------|----------|
@@ -30,4 +30,14 @@ We also have the Dim_Customers table:
 
 ### Goal: two measures: [Number of POs] and [Number of POs today]
 
-The [Number of POs] is a simple measure
+The [Number of POs] is a simple measure:
+
+```
+Number of POs = 
+COUNTROWS(
+    facts_po_data
+)
+```
+
+Its goal is to track the number of Purchase Orders and allow to see how many orders
+
