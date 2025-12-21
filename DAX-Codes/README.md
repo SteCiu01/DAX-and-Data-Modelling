@@ -25,7 +25,7 @@ Guidelines on how to handle with DAX complex filtering
 
 | Topic | Description | Link |
 |---------|-------------|------|
-| Filter Context and Data Model Design in DAX | Leverage data modelling to handle page-level, slicer and in-measure filtering on the same column | [Link](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/Data-Model-for-Filter-Contex-Measures/README.md)
+| Filter Context and Data Model Design | Leverage data modelling to handle page-level, slicer and in-measure filtering on the same column | [Link](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/Data-Model-for-Filter-Contex-Measures/README.md)
 
 #### Time Intelligence
 
