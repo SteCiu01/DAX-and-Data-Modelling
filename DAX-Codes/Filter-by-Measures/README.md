@@ -59,7 +59,7 @@ CALCULATETABLE(
         ),
 
     // we need to remove CHILD_ID from being filtered in the visual to properly filter based on parent level (as this is the lower level of hierarchy in the matrix)
-    // in case we want to be able to choose the range for the child level we need to remove this ALLSELECTED. In this case the filter range will apply to the child_id
+    // in case we want to be able to choose the range for the child level we need to remove this ALLSELECTED.
     ALLSELECTED(MyCompanyPositions[Child_ID]) 
 )
 
