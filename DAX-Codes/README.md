@@ -6,7 +6,9 @@ It is designed as my reference library for building semantic models and reports,
 
 Each code/use case is documented and organized by macro categories that I defined based on the code's nature and usage.
 
-#### Formatting
+---
+
+### Formatting
 
 DAX techiques to use when creating custom formatting logics.
 
@@ -19,7 +21,9 @@ DAX techiques to use when creating custom formatting logics.
 | Dynamic Visuals Headers |  Visual header that change based on slicers selection | [Link](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/Dynamic-Visuals-Headers/README.md) |
 | In-Measure SVGs | Use SVG images within measures to enhance your visualisations | [Link](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/In-Measure-SVGs/README.md) |
 
-#### Filter Context
+---
+
+### Filter Context
 
 Guidelines on how to handle complex filtering with DAX.
 
@@ -27,7 +31,9 @@ Guidelines on how to handle complex filtering with DAX.
 |---------|-------------|------|
 | Filter Context and Data Model Design | Leverage data modelling to handle page-level, slicer and in-measure filtering on the same column | [Link](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/Data-Model-for-Filter-Contex-Measures/README.md)
 
-#### Time Intelligence
+---
+
+### Time Intelligence
 
 Collection of few important time intelligence measures together with and optimised simple calendar table that guarantees them to work properly.
 
@@ -38,7 +44,9 @@ In fact, a pre-requisite for time intelligence functions to work is to have a ca
 | Create the Calendar Table | M-Code for creating a complete calendar table for the semantic model. Includes a future day for proper SPLY functions | [Link](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/Create-Calendar-Table/README.md) |
 | Handy Time Intelligence Functions | Some time intelligence functions, ready to be imported through DAX Query View | [Link](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/Handy-Time-Intelligence-Functions/README.md) |
 
-#### Control
+---
+
+### Control
 
 Measures to use within the visuals or in control/navigation buttons. They let developers control what is displayed in the visuals or what users will be clicking based on some criteria.
 
@@ -50,7 +58,9 @@ Measures to use within the visuals or in control/navigation buttons. They let de
 | Dynamic Top-N Selection| Build a slicer where you can type in a number (N) and this slicer would make you show in your visual the Top-N customers by a measure | [Link](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/Top-N-Selection/README.md) |
 | Page-Level Access Control in Power BI (UI-Based) | Prevent non-authorized users from navigating to a certain page and redirect them to a dedicated access request page. | [Link](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/Page-Level-Security/README.md) |
 
-#### Virtual Tables
+---
+
+### Virtual Tables
 
 These are examples of calculations that rely on in-code virtual tables, and that are used for complex/custom use cases, that would not be possible to successfully achieve with simple measures.
 
