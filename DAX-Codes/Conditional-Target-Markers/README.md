@@ -1,4 +1,4 @@
-# Traffic Light Conditional Target Markers
+# Traffic Light Conditional Targets
 
 Create a measure to display in tables or matrix visuals traffic light style markers based on a measure's value.
 
