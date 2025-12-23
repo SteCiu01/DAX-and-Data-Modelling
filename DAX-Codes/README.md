@@ -1,4 +1,4 @@
-## 🧮 DAX Codes and Best Practice
+## 🧮 DAX Codes & Best Practices
 
 This repository is a curated collection of my most frequently used and production-tested DAX codes, together with data modelling and filtering guidelines / best practices.
 
