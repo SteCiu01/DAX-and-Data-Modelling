@@ -1,4 +1,4 @@
-# Handy Time Intelligence Functions
+# Reusable Time Intelligence Measures
 
 Here below some pre-set time intelligence functions already based on the calendar table of the previous topic.
 
