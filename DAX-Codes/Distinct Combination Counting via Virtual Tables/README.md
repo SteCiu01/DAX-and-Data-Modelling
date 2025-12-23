@@ -1,4 +1,6 @@
-# Virtual Tables for Counting Distinct Combinations of Items
+# Distinct Combination Counting via Virtual Tables
+
+Resolve over-granularity issues by generating virtual tables at the desired level to count distinct item combinations.
 
 Let'simagine we have the facts_sales_table as below:
 
