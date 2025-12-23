@@ -4,6 +4,6 @@ This repository contains a collection of DAX code snippets, techniques and best 
 
 All examples are generalized, and each entry includes a short description of its use case.
 
-[🧮 DAX Codes](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/README.md)
+[🧮 DAX Codes & Best Practices](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/README.md)
 
 [🧩 DAX UDFs (Coming Soon)](https://github.com/SteCiu01/DAX/blob/main/DAX-UDFs/README.md)
