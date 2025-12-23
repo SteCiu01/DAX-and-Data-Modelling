@@ -67,7 +67,7 @@ Typical content:
 
 Create the following DAX measure:
 
-```DAX
+```
 Executive Access =
 IF (
     USERPRINCIPALNAME()
@@ -101,7 +101,7 @@ Navigation behavior:
 
 ---
 
-## Result
+#### Result
 
 * Executives can access sensitive content
 * Non-authorized users are blocked from navigation
@@ -115,31 +115,39 @@ This approach provides **UI-level access control only**.
 
 It does **not** prevent:
 
-* Direct access via page URLs
-* Data exposure through exports
-* Access via Analyze in Excel (if enabled)
+* Direct access via page URLs (see below how to overcome this)
+* Access via Analyze in Excel (you need to block this feature)
 
-All data remains loaded in the model.
+#### Block Direct access via page URLs
 
-For strict security requirements, this pattern must be combined with:
+Use a numeric return type (recommended for filters):
 
-* Row-Level Security (RLS)
-* Separate reports or datasets
-* Power BI App audiences or workspace permissions
+```
+Executive Access Visuals =
+IF (
+    USERPRINCIPALNAME()
+        IN VALUES ( 'Dim_Security_AzGroup_Executives'[userPrincipalName] ),
+    1,
+    0
+)
+```
 
----
+How to Apply It Correctly
 
-#### When to Use This Pattern
+1. Apply this measure [Executive Access Visuals] as a Visual-Level Filter for every sensitive visual on the Executive Page.
+2. Set condition: is 1
 
-Recommended for:
+Result:
 
-* Multiple audiences sharing the same report
-* Executive vs operational reporting
-* Lightweight access control without duplicating reports
+Executives → visuals render normally
 
-Not recommended for:
+Others → visuals do not render at all
 
-* Highly sensitive or regulated data
-* Compliance-driven security scenarios
+**Pro Tip: Add an Explicit “No Access” Message**
 
+Create a card or text box that:
+
+1. Shows only when Executive Access Visuals = 0
+2. Explains that access is restricted and how to request it
+3. This avoids a blank page and improves UX.
 
