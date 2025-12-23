@@ -1,4 +1,6 @@
-# Measures Filtering Slicers
+# Measures Controlling Slicer Values
+
+Synchronise slicers and visuals to avoid slicers displaying values excluded by visual-level logic
 
 #### Situation
 
