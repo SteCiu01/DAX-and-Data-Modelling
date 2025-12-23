@@ -29,7 +29,7 @@ Patterns and guidelines for managing complex filter interactions in DAX through 
 
 | Topic | Description | Link |
 |---------|-------------|------|
-| Filter Context Handling via Data Model Design | Use data modelling techniques to consistently manage page-level, slicer-level, and in-measure filtering on the same column | [Link](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/Data-Model-for-Filter-Contex-Measures/README.md) |
+| Filter Context Handling via Data Model Design | Use data modelling techniques to consistently manage page-level, slicer-level, and in-measure filtering on the same column | [Link](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/Filter%20Context%20Handling%20via%20Data%20Model%20Design/README.md) |
 
 ---
 
