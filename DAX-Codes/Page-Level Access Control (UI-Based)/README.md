@@ -1,4 +1,6 @@
-# Page-Level Access Control in Power BI (UI-Based)
+# Page-Level Access Control (UI-Based)
+
+Restrict navigation to specific report pages for non-authorised users and redirect them to an access request page.
 
 > **Note**
 > Power BI does not provide native Page Level Security.
