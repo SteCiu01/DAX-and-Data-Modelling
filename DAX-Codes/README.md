@@ -66,6 +66,6 @@ Advanced calculation patterns based on in-measure virtual tables, enabling solut
 
 | Topic | Description | Link |
 |---------|-------------|------|
-| Hierarchical Conditional Logic with Virtual Tables | Apply conditional logic at a controlled hierarchical granularity using virtual tables and iterators | [Link](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/Row-Level-Conditional-Logic-in-Virtual-Tables/README.md) |
-| Distinct Combination Counting via Virtual Tables | Resolve over-granularity issues by generating virtual tables at the desired level to count distinct item combinations | [Link](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/Distinct-Combinations-Count-with-Virtual-Tables/README.md) |
+| Hierarchical Conditional Logic with Virtual Tables | Apply conditional logic at a controlled hierarchical granularity using virtual tables and iterators | [Link](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/Hierarchical%20Conditional%20Logic%20with%20Virtual%20Tables/README.md) |
+| Distinct Combination Counting via Virtual Tables | Resolve over-granularity issues by generating virtual tables at the desired level to count distinct item combinations | [Link]([https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/Distinct-Combinations-Count-with-Virtual-Tables/README.md](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/Distinct%20Combination%20Counting%20via%20Virtual%20Tables/README.md) |
 
