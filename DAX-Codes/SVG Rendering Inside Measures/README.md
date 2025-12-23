@@ -1,4 +1,6 @@
-# In-Measures SVGs
+# SVG Rendering Inside Measures
+
+Embed SVG images directly in DAX measures to enrich visuals with custom icons and indicators.
 
 ### Step 1: define 2 or more measures in your model where you bring in the images you need as SVG
 
