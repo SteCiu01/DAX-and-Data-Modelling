@@ -44,7 +44,7 @@ When using the column 'Measure' from the parameter table in a slicer we can call
 
 <hr>
 
-#### Option 1: Dynamic Formatting
+#### 🔣 Option 1: Dynamic Formatting
 
 <img width="1040" height="219" alt="image" src="https://github.com/user-attachments/assets/6ca589ea-2d66-48a4-b4d3-7b2a10f84177" />
 
@@ -62,7 +62,7 @@ SWITCH(
 
 Guidelines: 
 - Considering what measure corresponds to Order 0, 1, or 2, etc.. in your measures selector, you need to adapt this code to your use case so that if Order = 0 is a currency and Order = 1 is a decimal value, you amend the code accordingly.
-- In case yoou have other measures that need to be formatted as currency or as whole number you can reference the code below
+- In case you have other measures that need to be formatted as currency or as whole number you can reference the code below
 
 ```
 SWITCH(
@@ -72,11 +72,11 @@ SWITCH(
 )
 ```
 
-After you set up the dynamic formatting go to - Visual Format > Data Label > Value - here you can set up Auto, or thousands, or none, etc. as well as the no of decimal places you want to display. 
+After you set up the dynamic formatting go to - Visual Format > Data Label > Value - here you can set up Auto, or thousands, or none, etc. as well as the number of decimal places you want to display. 
 
-However, in some instances the Auto might not work properly or will show you an Auto tha you don't like. This is why the Labels Format Measures (option 2 below) is the one that offers greater customization and flexibility.
+However, in some instances the Auto might not work properly or it will show you an Auto that you don't like. This is why the Labels Format Measures (option 2 below) is the one that offers greater customization and flexibility.
 
-#### Option 2: Labels Format Measures
+#### 🔡 Option 2: Labels Format Measures
 
 Here below the Labels Format measures to create.
 
@@ -151,10 +151,16 @@ SWITCH (
 )
 ```
 
-Note: for the variable ```VAR IsCurrency = _Order IN {0}``` adding all the order numbers referring to measure that need to be formatted with currency.
+Note: for the variable ```VAR IsCurrency = _Order IN {0}``` add all the order numbers referring to measure that need to be formatted with currency.
 
 After that go to: - Visual Format > Data Label > Value - here you can switch the Value Field with this measure.
 
 Output:
 
 <img width="125" height="162" alt="image" src="https://github.com/user-attachments/assets/b8a292dd-42e6-417e-a673-600c469c0360" />
+
+You can have both millions and thousands for the same measure. This is very flexible in situations where you have very big differences. 
+
+For instance imagine one month you have 40K and all the others are on millions scale, and you set up decimal 1. 
+
+You would have something like: 2.4M, 1.2M, etc., then: 0.0M - with this new formatting measure you would have: 2.4M, 1.2M, 40.2K, etc., ...
