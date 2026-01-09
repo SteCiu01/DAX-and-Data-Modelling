@@ -169,6 +169,8 @@ For instance imagine one month you have 40K and all the others are on millions s
 
 ### APPENDIX
 
+**Values Formatting**
+
 In case you want to limit the decimals, to reduce clutter, you can rely on the below code, that divides thousands, millions, billions and trillions into lower and upper ranges so that we can see: 1.5k, 21k, 105k, 1.7M, 15M, etc. instead of 1.5M, 21.3M, 105.4M, etc. 
 
 ```
@@ -279,3 +281,117 @@ SWITCH (
     )
 )
 ```
+
+**Variance Formatting**
+
+In case you want to keep the limited decimals experience but for a variance, you can use the below code. It will display variance values as: +956, +1.5k, -21k, +105k, -1.7M, +15M, etc.
+
+```
+Δ_vs_SPLY_Format = 
+VAR _Order =
+    SELECTEDVALUE ( 'IBCS-Column-Chart-Measures-Selector'[Order] )
+
+VAR _Value =
+    [ Actual]-[SPLY]
+
+VAR AbsValue =
+    ABS ( _Value )
+
+VAR IsCurrency =
+    _Order IN {0} -- Add all the order numbers referring to measure that need to be formatted with currency
+
+RETURN
+SWITCH (
+    TRUE(),
+    -- TRILLIONS UPPER
+    AbsValue >= 10000000000000,
+        FORMAT (
+            _Value / 1000000000000,
+            IF (
+                IsCurrency,
+                "+$0""T"";-$0""T""",
+                "+0""T"";-0""T"""
+            )
+        ),    
+    -- TRILLIONS LOWER
+    AbsValue >= 1000000000000,
+        FORMAT (
+            _Value / 1000000000000,
+            IF (
+                IsCurrency,
+                "+$0.0""T"";-$0.0""T""",
+                "+0.0""T"";-0.0""T"""
+            )
+        ),
+    -- BILLIONS UPPER
+    AbsValue >= 10000000000,
+        FORMAT (
+            _Value / 1000000000,
+            IF (
+                IsCurrency,
+                "+$0""B"";-$0""B""",
+                "+0""B"";-0""B"""
+            )
+        ),
+    -- BILLIONS LOWER
+    AbsValue >= 1000000000,
+        FORMAT (
+            _Value / 1000000000,
+            IF (
+                IsCurrency,
+                "+$0.0""B"";-$0.0""B""",
+                "+0.0""B"";-0.0""B"""
+            )
+        ),
+    -- MILLIONS UPPER
+    AbsValue >= 10000000,
+        FORMAT (
+            _Value / 1000000,
+            IF (
+                IsCurrency,
+                "+$0""M"";-$0""M""",
+                "+0""M"";-0""M"""
+            )
+        ),
+    -- MILLIONS LOWER
+    AbsValue >= 1000000,
+        FORMAT (
+            _Value / 1000000,
+            IF (
+                IsCurrency,
+                "+$0.0""M"";-$0.0""M""",
+                "+0.0""M"";-0.0""M"""
+            )
+        ),
+    -- THOUSANDS UPPER
+    AbsValue >= 10000,
+        FORMAT (
+            _Value / 1000,
+            IF (
+                IsCurrency,
+                "+$0""K"";-$0""K""",
+                "+0""K"";-0""K"""
+            )
+        ),
+    -- THOUSANDS LOWER
+    AbsValue >= 1000,
+        FORMAT (
+            _Value / 1000,
+            IF (
+                IsCurrency,
+                "+$0.0""K"";-$0.0""K""",
+                "+0.0""K"";-0.0""K"""
+            )
+        ),
+    -- BELOW 1K
+    FORMAT (
+        _Value,
+        IF (
+            IsCurrency,
+            "+$#,0;-$#,0",
+            "+#,0;-#,0"
+        )
+    )
+)
+```
+
