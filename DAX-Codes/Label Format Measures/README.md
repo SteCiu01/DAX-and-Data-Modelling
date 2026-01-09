@@ -169,7 +169,7 @@ For instance imagine one month you have 40K and all the others are on millions s
 
 ### APPENDIX
 
-**Values Formatting**
+**Detailed Values Formatting**
 
 In case you want to limit the decimals, to reduce clutter, you can rely on the below code, that divides thousands, millions, billions and trillions into lower and upper ranges so that we can see: 1.5k, 21k, 105k, 1.7M, 15M, etc. instead of 1.5M, 21.3M, 105.4M, etc. 
 
@@ -282,7 +282,7 @@ SWITCH (
 )
 ```
 
-**Variance Formatting**
+**Detailed Variance Formatting**
 
 In case you want to keep the limited decimals experience but for a variance, you can use the below code. It will display variance values as: +956, +1.5k, -21k, +105k, -1.7M, +15M, etc.
 
