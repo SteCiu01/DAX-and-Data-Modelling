@@ -179,6 +179,22 @@ in
 After the creation of the table, the following steps need to be ensured to guarantee it works properly:
 
 - Create a 1 to many relationship from the Date Column of the calendar table with the date columns of the other tables in the model.
+  
 - Sort Month Name and Quarter Name columns respectively by Month Number and Quarter Number columns
+  
 - (Optional) Create a hierarchy for faster usage - suggested: year, quarter name, month name
+  
 - In the Filters Pane > Filters on all pages locate the Is Future Day column and select ONLY "No" - This guarantees the SPLY function or the DATEADD function that brings back the time of 1 yr work well, returning for the last available and incomplete period only those values referring to the same period last year, not for the full same period last year. For instance if we are on the 12th of December of 2025 and we do not use this "future day technique" we would return as SPLY the full December 2024. Using the technique we return values until 12th of Dec 2024.
+
+**💡 Pro Tip**
+The Month Rank column enables stable Top-N month filtering independent of relative date logic.
+Unlike relative date filters—which frequently produce partial periods—the Month Rank approach always returns fully populated months for the selected time window (e.g. last 24 months).
+
+**Instructions**
+- Add the Month Rank column to Visual-level filters
+- Set the filter type to Top N
+- Choose Top N by Max of Month Rank
+- Enter the number of months to display (e.g. 24)
+- The visual will dynamically show full data for the last 24 complete months
+
+Month Rank avoids the partial-period problem of relative date filters by enforcing complete month selection.
