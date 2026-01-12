@@ -161,7 +161,7 @@ let
         ),
 
     // ============================================================
-    // QUARTER RANK LOGIC (NEW)
+    // QUARTER RANK LOGIC
     // ============================================================
     Year_Quarter_Group =
         Table.Group(
@@ -232,14 +232,14 @@ After the creation of the table, the following steps need to be ensured to guara
 - In the Filters Pane > Filters on all pages locate the Is Future Day column and select ONLY "No" - This guarantees the SPLY function or the DATEADD function that brings back the time of 1 yr work well, returning for the last available and incomplete period only those values referring to the same period last year, not for the full same period last year. For instance if we are on the 12th of December of 2025 and we do not use this "future day technique" we would return as SPLY the full December 2024. Using the technique we return values until 12th of Dec 2024.
 
 **💡 Pro Tip**
-The Month Rank column enables stable Top-N month filtering independent of relative date logic.
-Unlike relative date filters—which frequently produce partial periods—the Month Rank approach always returns fully populated months for the selected time window (e.g. last 24 months).
+The Month Rank and Quarter Rank columns enables stable Top-N month or TopN quarter filtering independent of relative date logic.
+Unlike relative date filters—which frequently produce partial periods—the Month/Quarter Rank approach always returns fully populated months/quarters for the selected time window (e.g. last 24 months or 8 quarters).
 
 **Instructions**
-- Add the Month Rank column to Visual-level filters
+- Add the Month/Quarter Rank column to Visual-level filters
 - Set the filter type to Top N
-- Choose Top N by Max of Month Rank
-- Enter the number of months to display (e.g. 24)
-- The visual will dynamically show full data for the last 24 complete months
+- Choose Top N by Max of Month/Quarter Rank
+- Enter the number of months/Quarters to display (e.g. 24 or 8)
+- The visual will dynamically show full data for the last 24 complete months or the last 8 complete quarters
 
-Month Rank avoids the partial-period problem of relative date filters by enforcing complete month selection.
+Month/Quarter Rank avoids the partial-period problem of relative date filters by enforcing complete month/quarter selection.
