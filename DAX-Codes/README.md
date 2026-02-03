@@ -26,7 +26,7 @@ DAX techniques for implementing advanced and reusable custom formatting logic in
 
 ### Filter Context
 
-Patterns and guidelines for managing complex filter interactions in DAX through proper model design and measure logic.
+Patterns and guidelines for managing complex filter interactions in DAX through proper model design and measures logic.
 
 | Topic | Description | Link |
 |---------|-------------|------|
