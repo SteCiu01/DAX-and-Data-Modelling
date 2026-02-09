@@ -1,6 +1,6 @@
-# DAX, Filtering & Data Modelling
+# DAX & Data Modelling
 
-This repository contains a collection of DAX codes and UDFs, together with data modelling and filtering best practices. 
+This repository contains a collection of DAX codes and UDFs, together with data modelling best practices. 
 
 These resources have been created during my work or for some personal projects, they are generally production-tested, and I find them quite interesting for their complexity or for their use case, to make them worthy to be shared here. 
 
