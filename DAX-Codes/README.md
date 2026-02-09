@@ -1,6 +1,6 @@
 ## 🧮 DAX Codes & Best Practices
 
-Collection of my most frequently used and production-tested DAX codes, together with data modelling and filtering best practices.
+Collection of my most frequently used and production-tested DAX codes, together with data modelling best practices.
 
 It is designed as my reference library for building semantic models and reports, to avoid going every time in previous models to retrieve old expressions and techniques to replicate.
 
