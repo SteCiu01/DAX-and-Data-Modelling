@@ -1,4 +1,4 @@
-# Reusable Time Intelligence Measures
+# Standard Time Functions Library
 
 Here below some pre-set time intelligence functions already based on the calendar table of the previous topic.
 
