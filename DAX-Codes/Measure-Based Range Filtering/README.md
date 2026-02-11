@@ -1,4 +1,4 @@
-# Visual Filtering by Measures
+# Measure-Based Range Filtering
 
 With a DAX control measure is possible to filter an amount range using slicers, in a Power BI report.
 
