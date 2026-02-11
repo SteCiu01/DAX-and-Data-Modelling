@@ -1,4 +1,4 @@
-# Dynamic Top-N Selection
+# Parameter-Driven Top-N
 
 Enable users to filter visuals dynamically based on quantitative measures (e.g. revenue, margin, volume).
 
