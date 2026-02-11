@@ -1,4 +1,4 @@
-# Filter Context Handling via Data Model Design
+# Dimension Table Isolation Pattern
 
 Use data modelling techniques to consistently manage page-level, visual-level, slicer-level, and in-measure filtering on the same column.
 
