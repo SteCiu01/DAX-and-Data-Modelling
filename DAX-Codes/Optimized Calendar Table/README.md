@@ -1,4 +1,4 @@
-# Calendar Table Construction
+# Optimized Calendar Table
 
 Power Query (M) code to generate a complete calendar table for the semantic model, including a future date for proper SPLY calculations.
 
