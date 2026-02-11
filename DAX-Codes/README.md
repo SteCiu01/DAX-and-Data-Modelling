@@ -6,7 +6,7 @@ Each code is fully documented with use cases, implementation steps, practical ex
 
 ---
 
-# Visual Formatting & Presentation
+### Visual Formatting & Presentation
 
 Advanced DAX techniques for creating dynamic, professional-looking visuals with full control over formatting and conditional styling.
 
@@ -22,7 +22,7 @@ Advanced DAX techniques for creating dynamic, professional-looking visuals with 
 
 ---
 
-## Filter Context & Data Modelling
+### Filter Context & Data Modelling
 
 Data model design topics for managing complex filter interactions and preventing common pitfalls when manipulating filter context.
 
@@ -32,7 +32,7 @@ Data model design topics for managing complex filter interactions and preventing
 
 ---
 
-## Time Intelligence
+### Time Intelligence
 
 Essential time-based calculation topics built on a robust calendar table foundation to ensure accurate and reliable period comparisons.
 
@@ -45,7 +45,7 @@ Essential time-based calculation topics built on a robust calendar table foundat
 
 ---
 
-## Interactive Controls & Dynamic Filtering
+### Interactive Controls & Dynamic Filtering
 
 Measures and techniques for creating interactive user experiences with slicers, filters, and conditional navigation.
 
@@ -59,7 +59,7 @@ Measures and techniques for creating interactive user experiences with slicers, 
 
 ---
 
-## Virtual Tables & Advanced Calculations
+### Virtual Tables & Advanced Calculations
 
 In-memory table techniques for calculations that cannot be solved with standard aggregation measures.
 
