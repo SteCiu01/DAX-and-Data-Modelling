@@ -1,4 +1,4 @@
-# Measures Controlling Slicer Values
+# Visual-Slicer Synchronization
 
 Synchronise slicers and visuals to avoid slicers displaying values excluded by visual-level logic
 
