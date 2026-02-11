@@ -1,4 +1,4 @@
-# Page-Level Access Control (UI-Based)
+# Conditional Page Navigation
 
 Restrict navigation to specific report pages for non-authorised users and redirect them to an access request page.
 
