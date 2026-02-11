@@ -4,13 +4,13 @@ A production-tested collection of DAX codes, data modelling techniques, and best
 
 ## Overview
 
-This repository serves as a comprehensive reference library for building robust Power BI semantic models and reports. Each pattern is peroduction-ready and is documented with clear examples, use cases, and implementation guidelines.
+This repository serves as a comprehensive reference library for building robust Power BI semantic models and reports. Each code is production-ready and is documented with clear examples, use cases, and implementation guidelines.
 
 All examples are **generalized and reusable** — designed to be easily adapted to your specific use cases.
 
 ---
 
-[🧮 DAX Codes & Best Practices](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/README.md)
+[🧮 DAX Codes & Best Practices](https://github.com/SteCiu01/DAX-and-Data-Modelling/blob/main/DAX-Codes/README.md)
 
 A comprehensive collection of production-tested DAX codes and data modelling techniques for Power BI semantic models. Each code is fully documented with use cases, implementation steps, practical examples and is organized by functional category:
 
@@ -20,7 +20,7 @@ A comprehensive collection of production-tested DAX codes and data modelling tec
 - **Interactive Controls** — Dynamic filtering and navigation patterns
 - **Virtual Tables** — Advanced calculation patterns using in-memory tables
 
-[🧩 DAX UDFs](https://github.com/SteCiu01/DAX/blob/main/DAX-UDFs/README.md)
+[🧩 DAX UDFs](https://github.com/SteCiu01/DAX-and-Data-Modelling/blob/main/DAX-UDFs/README.md)
 
 Reusable function library for complex logic encapsulation (Coming Soon)
 
