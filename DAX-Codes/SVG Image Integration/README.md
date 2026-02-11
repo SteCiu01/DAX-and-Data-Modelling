@@ -1,4 +1,4 @@
-# SVG Rendering Inside Measures
+# SVG Image Integration
 
 Embed SVG images directly in DAX measures to enrich visuals with custom icons and indicators.
 
