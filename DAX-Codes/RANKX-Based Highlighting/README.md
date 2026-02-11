@@ -1,4 +1,4 @@
-# Top-N / Bottom-N Conditional Colouring
+# RANKX-Based Highlighting
 
 Use RANKX-based logic to highlight Top-N or Bottom-N categories via conditional formatting
 
