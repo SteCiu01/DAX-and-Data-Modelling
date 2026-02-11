@@ -1,10 +1,8 @@
 ## 🧮 DAX Codes & Best Practices
 
-Collection of my most frequently used and production-tested DAX codes, together with data modelling best practices.
+A comprehensive collection of production-tested DAX codes and data modelling techniques for Power BI semantic models. 
 
-It is designed as my reference library for building semantic models and reports, to avoid going every time in previous models to retrieve old DAX expressions and modelling techniques to replicate.
-
-Each topic is documented and organized by macro categories that I defined based on the topic's nature and usage.
+Each code is fully documented with use cases, implementation steps, practical examples and is organized by functional category.
 
 ---
 
