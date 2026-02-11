@@ -41,7 +41,7 @@ Essential time-based calculation topics built on a robust calendar table foundat
 | **Optimized Calendar Table** | Power Query (M) code to generate a complete date dimension with rank columns and future date handling for SPLY calculations | [Link](https://github.com/SteCiu01/DAX-and-Data-Modelling/blob/main/DAX-Codes/Optimized%20Calendar%20Table/README.md) |
 | **Standard Time Functions Library** | Pre-built YTD, SPLY, prior period measures ready for import via DAX Query View | [Link](https://github.com/SteCiu01/DAX-and-Data-Modelling/blob/main/DAX-Codes/Standard%20Time%20Functions%20Library/README.md) |
 
-**Critical Requirement:** All time intelligence topics depend on a complete calendar table with no gaps between start and end dates. Use the provided construction topic to avoid calculation errors.
+**⚠️ Critical Requirement:** All time intelligence topics depend on a complete calendar table with no gaps between start and end dates. Use the provided construction topic to avoid calculation errors.
 
 ---
 
