@@ -22,7 +22,8 @@ A comprehensive collection of production-tested DAX codes and data modelling tec
 
 [🧩 DAX UDFs](https://github.com/SteCiu01/DAX-and-Data-Modelling/blob/main/DAX-UDFs/README.md)
 
-Reusable function library for complex logic encapsulation (Coming Soon)
+🧩 DAX User-Defined Functions
+A reusable function library for encapsulating complex logic into clean, maintainable DAX. These UDFs are designed to reduce repetition across large semantic models and make advanced patterns accessible without rewriting from scratch each time.
 
 ---
 
