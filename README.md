@@ -28,12 +28,7 @@ A reusable function library for encapsulating complex logic into clean, maintain
 
 ## Contributing
 
-Found a bug? Have an enhancement? Contributions are welcome!
-
-1. Fork this repository
-2. Create a feature branch (`git checkout -b feature/improvement`)
-3. Commit your changes with clear descriptions
-4. Submit a pull request with detailed explanation
+Have a pattern to add or a correction to suggest? Open an issue or reach out on [LinkedIn](https://www.linkedin.com/in/stefano-ciurlia/)
 
 ---
 
