@@ -48,7 +48,7 @@ When using the column 'Measure' from the parameter table in a slicer we can call
 
 <img width="1040" height="219" alt="image" src="https://github.com/user-attachments/assets/6ca589ea-2d66-48a4-b4d3-7b2a10f84177" />
 
-In the measure formatting options, choose dynamic. This let's you to write a conditional formatting for the measure, based on the type of measure you are calling using the parameter.
+In the measure formatting options, choose dynamic. This lets you write a conditional formatting for the measure, based on the type of measure you are calling using the parameter.
 
 Here the FORMAT code:
 
@@ -399,7 +399,7 @@ SWITCH (
 
 Formatting code for percentage variations using "+" and "-" before the percentage. 
 
-This code covers from situations where the Delta is so small that negative percentages like -0.00001% are perceived as 0 and formatted with as positive in a typical string like: ```FORMAT(_pct, "+0.0%; -0.0%; +0.0%")```
+This code covers situations where the Delta is so small that negative percentages like -0.00001% are perceived as 0 and formatted as positive in a typical string like: ```FORMAT(_pct, "+0.0%; -0.0%; +0.0%")```
 
 ```
 Δ_%_vs_SPLY_Format = 

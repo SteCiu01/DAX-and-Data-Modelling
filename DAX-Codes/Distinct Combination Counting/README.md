@@ -2,7 +2,7 @@
 
 Resolve over-granularity issues by generating virtual tables at the desired level to count distinct item combinations.
 
-Let'simagine we have the facts_sales_table as below:
+Let's imagine we have the facts_sales_table as below:
 
 | customer_id | service_id | configuration_id |
 |----|---------|---------------|

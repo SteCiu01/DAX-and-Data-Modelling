@@ -69,7 +69,7 @@ RETURN
 
 1. Use the control measure in the bar chart visual filters and set it as **"IS 1"**
 2. In a slicer use the ```Parameter Top-N'[Parameter Top-N]``` from the parameter.
-3. In slicer format > slicer settings > options-style set "Single Vlaue"
+3. In slicer format > slicer settings > options-style set "Single Value"
 
 Now you can input in the slicer a Top N number, from 1 to 50 and see in the bar chart the top N customers with their amount of Total Sales.
 

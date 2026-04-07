@@ -232,7 +232,7 @@ After the creation of the table, the following steps need to be ensured to guara
 - In the Filters Pane > Filters on all pages locate the Is Future Day column and select ONLY "No" - This guarantees the SPLY function or the DATEADD function that brings back the time of 1 yr work well, returning for the last available and incomplete period only those values referring to the same period last year, not for the full same period last year. For instance if we are on the 12th of December of 2025 and we do not use this "future day technique" we would return as SPLY the full December 2024. Using the technique we return values until 12th of Dec 2024.
 
 **💡 Pro Tip**
-The Month Rank and Quarter Rank columns enables stable Top-N month or TopN quarter filtering independent of relative date logic.
+The Month Rank and Quarter Rank columns enable stable Top-N month or TopN quarter filtering independent of relative date logic.
 Unlike relative date filters—which frequently produce partial periods—the Month/Quarter Rank approach always returns fully populated months/quarters for the selected time window (e.g. last 24 months or 8 quarters).
 
 **Instructions**

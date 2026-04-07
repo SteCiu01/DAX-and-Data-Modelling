@@ -28,9 +28,9 @@ This is the result:
 
 <img width="40%" alt="image" src="https://github.com/user-attachments/assets/674903e6-cf5f-4ead-96fd-863f8b8e4969" />
 
-In this situation, if we drill up or drill down the hierarchy the measures would automatically adapt and the numbers would always be the desiredd ones.
+In this situation, if we drill up or drill down the hierarchy the measures would automatically adapt and the numbers would always be the desired ones.
 
-Now let's immagine you need to create a measure for what the team considers NET Old Positions and the logic would be:
+Now let's imagine you need to create a measure for what the team considers NET Old Positions and the logic would be:
 
 ```
 Logic =

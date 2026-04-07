@@ -98,7 +98,7 @@ At this point, the whole filter by measure technique is done. We can now test it
 
 ## Let’s Test it!
 
-Selecting the range [0, All Positive AMounts], only the P4 and P1 customers are visible in the visual (it worked!). 
+Selecting the range [0, All Positive Amounts], only the P4 and P1 customers are visible in the visual (it worked!). 
 
 <img width="60%" alt="image" src="https://github.com/user-attachments/assets/9d10bfc7-feac-4193-b502-aaab2afc1e67" />
 

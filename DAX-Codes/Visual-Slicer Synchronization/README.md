@@ -27,4 +27,4 @@ However, if we have a slicer for Products or for any other Products-related cate
 
 We need to replicate the operation and drop the measure [Total Returns] in the slicer/s visual filter section and set it as "IS NOT BLANK".
 
-Now also the slicer containing Products will contain only Product A and Product B.
+Now also the slicer containing Products will contain only Product A and Product C.
